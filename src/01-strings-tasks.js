@@ -230,9 +230,11 @@ function getRectangleString(width, height) {
  */
 function encodeToRot13(str) {
   let result = '';
-  const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  for (let i = 0; i < str.length; i + 1) {
+  const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+    'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
+    'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  for (let i = 0; i < str.length; i += 1) {
     if (str[i].toLowerCase() !== arr[arr.indexOf(str[i].toLowerCase())]) {
       result += str[i];
     } else if (str[i] === arr[arr.indexOf(str[i])]) {
